@@ -102,7 +102,7 @@ return new class extends Seeder
             'email' => 'admin',
         ], [
             'name' => 'Admin User',
-            'password' => Hash::make('Renovatio3241'),
+            'password' => Hash::make('Syst3m4.'),
             'role_id' => $adminRole->id,
             'created_at' => now(),
             'updated_at' => now(),
