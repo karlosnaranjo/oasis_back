@@ -1,0 +1,9 @@
+[
+	{"columnName": "code", "columnLabel": "Codigo", "defaultValue": "", "type": "field_shorttext", "nullable": "true"},
+	{"columnName": "patient_id", "columnLabel": "Paciente", "defaultValue": "", "type": "field_fk", "references": "patients", "nullable": "true"},
+	{"columnName": "employee_id", "columnLabel": "Empleado", "defaultValue": "", "type": "field_fk", "references": "employees", "nullable": "true"},
+	{"columnName": "date_of_evolution", "columnLabel": "Fecha de registro", "defaultValue": "", "type": "field_datetime", "nullable": "true"},
+	{"columnName": "area", "columnLabel": "Area que registra evolucion", "defaultValue": "", "type": "field_shorttext", "nullable": "true"},
+	{"columnName": "comments", "columnLabel": "Notas", "defaultValue": "", "type": "field_xlongtext", "nullable": "true"},
+	{"columnName": "status", "columnLabel": "Estado", "defaultValue": "", "type": "field_boolean", "nullable": "true"}
+]

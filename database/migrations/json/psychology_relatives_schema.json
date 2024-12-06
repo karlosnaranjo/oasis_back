@@ -1,0 +1,7 @@
+[
+	{"columnName": "psychology_id", "columnLabel": "id", "defaultValue": "", "type": "field_fk", "references": "psychologies", "nullable": "true"},
+	{"columnName": "name", "columnLabel": "Nombres y Apellidos", "defaultValue": "", "type": "field_mediumtext", "nullable": "true"},
+	{"columnName": "relative_id", "columnLabel": "Parentesco", "defaultValue": "", "type": "field_fk", "references": "relatives", "nullable": "true"},
+	{"columnName": "age", "columnLabel": "Edad", "defaultValue": "", "type": "field_shorttext", "nullable": "true"},
+	{"columnName": "relationship_type", "columnLabel": "Tipo de relacion", "defaultValue": "", "type": "field_enum", "attrChoices": [{ "label": "Estrecha", "value": "Estrecha" },{ "label": "Cercana", "value": "Cercana" },{ "label": "Distante", "value": "Distante" }], "nullable": "true"}
+]

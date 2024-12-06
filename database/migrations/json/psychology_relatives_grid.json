@@ -1,0 +1,10 @@
+[
+	{
+		"data": "id"
+	},
+	{"title": "id", "data": "psychology_id", "tableReference": "psychologies"},
+	{"title": "Nombres y Apellidos", "data": "name", "tableReference": "0"},
+	{"title": "Parentesco", "data": "relative_id", "tableReference": "relatives"},
+	{"title": "Edad", "data": "age", "tableReference": "0"},
+	{"title": "Tipo de relacion", "data": "relationship_type", "tableReference": "0"}
+]

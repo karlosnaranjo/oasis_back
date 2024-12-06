@@ -1,0 +1,15 @@
+{
+    "oasis": {
+        "suffixController": "Controller",
+        "suffixModel": "",
+        "suffixRelation": "",
+        "suffixRequest": "Request",
+        "suffixResource": "Resource",
+        "suffixRepository": "Respository",
+        "createRequests": true,
+        "controllerExtends": "ApiController",
+        "apiFolder": "API",
+        "apiVersion": "V1",
+        "frontMasterFolder": "masters"
+    }
+}

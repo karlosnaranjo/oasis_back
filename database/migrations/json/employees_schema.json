@@ -1,0 +1,16 @@
+[
+	{"columnName": "document_type", "columnLabel": "Tipo de documento", "defaultValue": "", "type": "field_enum", "attrChoices": [{ "label": "DNI", "value": "DNI" },{ "label": "RUC", "value": "RUC" },{ "label": "TI", "value": "TI" },{ "label": "CEDULA", "value": "CEDULA" }], "nullable": "true"},
+	{"columnName": "code", "columnLabel": "Numero", "defaultValue": "", "type": "field_shorttext", "nullable": "false"},
+	{"columnName": "name", "columnLabel": "Nombres", "defaultValue": "", "type": "field_mediumtext", "nullable": "false"},
+	{"columnName": "image", "columnLabel": "Imagen", "defaultValue": "", "type": "field_longtext", "nullable": "true"},
+	{"columnName": "gender", "columnLabel": "Genero", "defaultValue": "", "type": "field_enum", "attrChoices": [{ "label": "Masculino", "value": "Masculino" },{ "label": "Femenino", "value": "Femenino" },{ "label": "No binario", "value": "No binario" },{ "label": "Prefiero no especificar", "value": "Prefiero no especificar" }], "nullable": "false"},
+	{"columnName": "marital_status", "columnLabel": "Estado Civil", "defaultValue": "", "type": "field_enum", "attrChoices": [{ "label": "Soltero(a)", "value": "Soltero(a)" },{ "label": "Casado(a)", "value": "Casado(a)" },{ "label": "Union Libre", "value": "Union Libre" },{ "label": "Separado(a)", "value": "Separado(a)" },{ "label": "Divorciado(a)", "value": "Divorciado(a)" },{ "label": "Viudo(a)", "value": "Viudo(a)" }], "nullable": "false"},
+	{"columnName": "date_of_birth", "columnLabel": "Fecha de Nacimiento", "defaultValue": "", "type": "field_date", "nullable": "true"},
+	{"columnName": "address1", "columnLabel": "Direccion 1", "defaultValue": "", "type": "field_longtext", "nullable": "false"},
+	{"columnName": "address2", "columnLabel": "Direccion 2", "defaultValue": "", "type": "field_longtext", "nullable": "false"},
+	{"columnName": "phone", "columnLabel": "Telefono", "defaultValue": "", "type": "field_phone", "nullable": "false"},
+	{"columnName": "cellphone", "columnLabel": "Celular", "defaultValue": "", "type": "field_mediumtext", "nullable": "false"},
+	{"columnName": "email", "columnLabel": "E-Mail", "defaultValue": "", "type": "field_email", "nullable": "false"},
+	{"columnName": "job_title", "columnLabel": "Cargo", "defaultValue": "", "type": "field_mediumtext", "nullable": "false"},
+	{"columnName": "status", "columnLabel": "Estado", "defaultValue": "1", "type": "field_boolean", "nullable": "false"}
+]

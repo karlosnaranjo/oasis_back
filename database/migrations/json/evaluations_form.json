@@ -1,0 +1,202 @@
+[
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_shorttext", 
+				"data": "code", 
+				"label": "Codigo", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_fk", 
+				"data": "patient_id", 
+				"label": "Paciente", 
+				"tableReference": "patients", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_datetime", 
+				"data": "creation_date", 
+				"label": "Fecha de Creacion", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_fk", 
+				"data": "phase_id", 
+				"label": "Fase", 
+				"tableReference": "phases", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_fk", 
+				"data": "target_id", 
+				"label": "Objetivo", 
+				"tableReference": "targets", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_datetime", 
+				"data": "start_date", 
+				"label": "Fecha inicio", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_datetime", 
+				"data": "end_date", 
+				"label": "Fecha final", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "clinical_team", 
+				"label": "Apreciacion Equipo Clinico", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "achievement", 
+				"label": "Logros y Dificultades", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "strategy", 
+				"label": "Estrategias Utilizadas", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "requirement", 
+				"label": "Exigencias", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_enum", 
+				"data": "test", 
+				"label": "Evaluacion", 
+				"tableReference": "0", 
+				"attrChoices": [{ "label": "Positivo", "value": "Positivo" },{ "label": "Negativo", "value": "Negativo" },{ "label": "Observacion", "value": "Observacion" }], 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_boolean", 
+				"data": "status", 
+				"label": "Estado", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	}
+]
+

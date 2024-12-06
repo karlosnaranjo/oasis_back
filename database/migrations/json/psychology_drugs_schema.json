@@ -1,0 +1,8 @@
+[
+	{"columnName": "psychology_id", "columnLabel": "id", "defaultValue": "", "type": "field_fk", "references": "psychologies", "nullable": "true"},
+	{"columnName": "drug_id", "columnLabel": "Sustancia", "defaultValue": "", "type": "field_fk", "references": "drugs", "nullable": "true"},
+	{"columnName": "start_age", "columnLabel": "Edad de inicio", "defaultValue": "", "type": "field_shorttext", "nullable": "true"},
+	{"columnName": "frecuency_of_consumption", "columnLabel": "Frecuencia de Consumo", "defaultValue": "", "type": "field_mediumtext", "nullable": "true"},
+	{"columnName": "maximum_abstinence", "columnLabel": "Maxima abstinencia", "defaultValue": "", "type": "field_shortint", "nullable": "true"},
+	{"columnName": "consumption_date", "columnLabel": "Fecha ultimo consumo", "defaultValue": "", "type": "field_date", "nullable": "true"}
+]

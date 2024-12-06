@@ -1,0 +1,93 @@
+[
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_fk", 
+				"data": "psychology_id", 
+				"label": "id", 
+				"tableReference": "psychologies", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_fk", 
+				"data": "drug_id", 
+				"label": "Sustancia", 
+				"tableReference": "drugs", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_shorttext", 
+				"data": "start_age", 
+				"label": "Edad de inicio", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_mediumtext", 
+				"data": "frecuency_of_consumption", 
+				"label": "Frecuencia de Consumo", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_shortint", 
+				"data": "maximum_abstinence", 
+				"label": "Maxima abstinencia", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_date", 
+				"data": "consumption_date", 
+				"label": "Fecha ultimo consumo", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	}
+]
+

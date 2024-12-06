@@ -1,0 +1,11 @@
+[
+	{
+		"data": "id"
+	},
+	{"title": "field_fk", "data": "id"},
+	{"title": "field_fk", "data": "Sustancia"},
+	{"title": "field_shorttext", "data": "Edad de inicio"},
+	{"title": "field_mediumtext", "data": "Frecuencia de Consumo"},
+	{"title": "field_shortint", "data": "Maxima abstinencia"},
+	{"title": "field_date", "data": "Fecha ultimo consumo"}
+]

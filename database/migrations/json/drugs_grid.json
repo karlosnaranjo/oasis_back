@@ -1,0 +1,9 @@
+[
+	{
+		"data": "id"
+	},
+	{"title": "Codigo", "data": "code", "tableReference": "0"},
+	{"title": "Nombre", "data": "name", "tableReference": "0"},
+	{"title": "Nombre tecnico", "data": "technical_name", "tableReference": "0"},
+	{"title": "Estado", "data": "status", "tableReference": "0"}
+]

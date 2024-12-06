@@ -1,0 +1,63 @@
+[
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_shorttext", 
+				"data": "code", 
+				"label": "Codigo", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_mediumtext", 
+				"data": "name", 
+				"label": "Nombre fase", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_boolean", 
+				"data": "status", 
+				"label": "Estado", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "tabs",
+		"children": [
+			{
+				"type": "grid", 
+				"field_type": "field_grid", 
+				"data": "rel_targets", 
+				"label": "Objetivos", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	}
+]
+

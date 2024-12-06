@@ -1,0 +1,111 @@
+[
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_shorttext", 
+				"data": "code", 
+				"label": "Codigo", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_fk", 
+				"data": "patient_id", 
+				"label": "Paciente", 
+				"tableReference": "patients", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_fk", 
+				"data": "employee_id", 
+				"label": "Empleado", 
+				"tableReference": "employees", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_datetime", 
+				"data": "date_of_evolution", 
+				"label": "Fecha de registro", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_shorttext", 
+				"data": "area", 
+				"label": "Area que registra evolucion", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "comments", 
+				"label": "Notas", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_boolean", 
+				"data": "status", 
+				"label": "Estado", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	}
+]
+

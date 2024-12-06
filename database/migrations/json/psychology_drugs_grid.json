@@ -1,0 +1,11 @@
+[
+	{
+		"data": "id"
+	},
+	{"title": "id", "data": "psychology_id", "tableReference": "psychologies"},
+	{"title": "Sustancia", "data": "drug_id", "tableReference": "drugs"},
+	{"title": "Edad de inicio", "data": "start_age", "tableReference": "0"},
+	{"title": "Frecuencia de Consumo", "data": "frecuency_of_consumption", "tableReference": "0"},
+	{"title": "Maxima abstinencia", "data": "maximum_abstinence", "tableReference": "0"},
+	{"title": "Fecha ultimo consumo", "data": "consumption_date", "tableReference": "0"}
+]

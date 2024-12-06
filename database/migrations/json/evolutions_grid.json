@@ -1,0 +1,12 @@
+[
+	{
+		"data": "id"
+	},
+	{"title": "Codigo", "data": "code", "tableReference": "0"},
+	{"title": "Paciente", "data": "patient_id", "tableReference": "patients"},
+	{"title": "Empleado", "data": "employee_id", "tableReference": "employees"},
+	{"title": "Fecha de registro", "data": "date_of_evolution", "tableReference": "0"},
+	{"title": "Area que registra evolucion", "data": "area", "tableReference": "0"},
+	{"title": "Notas", "data": "comments", "tableReference": "0"},
+	{"title": "Estado", "data": "status", "tableReference": "0"}
+]

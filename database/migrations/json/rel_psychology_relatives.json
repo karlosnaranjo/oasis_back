@@ -1,0 +1,10 @@
+[
+	{
+		"data": "id"
+	},
+	{"title": "field_fk", "data": "id"},
+	{"title": "field_mediumtext", "data": "Nombres y Apellidos"},
+	{"title": "field_fk", "data": "Parentesco"},
+	{"title": "field_shorttext", "data": "Edad"},
+	{"title": "field_enum", "data": "Tipo de relacion"}
+]

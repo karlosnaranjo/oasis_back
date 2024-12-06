@@ -1,0 +1,128 @@
+{
+    
+    "field_boolean": {
+        "laravel_type": "boolean",
+        "render": "SwitchBase",
+        "length": ""
+    },
+    "field_date": {
+        "laravel_type": "date",
+        "render": "DatePickerBase",
+        "length": ""
+    },
+    "field_time": {
+        "laravel_type": "string",
+        "render": "DatePickerBase",
+        "length": "8"
+    },
+    "field_datetime": {
+        "laravel_type": "dateTime",
+        "render": "DatePickerBase",
+        "length": ""
+    },
+    "field_decimal": {
+        "laravel_type": "decimal",
+        "render": "NumberBase",
+        "length": "15,4"
+    },
+    "field_longint": {
+        "laravel_type": "integer",
+        "render": "NumberBase",
+        "length": ""
+    },
+    "field_shortint": {
+        "laravel_type": "smallInteger",
+        "render": "NumberBase",
+        "length": ""
+    },
+    "field_currency": {
+        "laravel_type": "decimal",
+        "render": "NumberBase",
+        "length": "15,4"
+    },
+    "field_email": {
+        "laravel_type": "string",
+        "render": "TextBase",
+        "length": "255"
+    },
+    "field_formula": {
+        "laravel_type": "text",
+        "render": "TextAreaBase",
+        "length": ""
+    },
+    "field_tinytext": {
+        "laravel_type": "string",
+        "render": "TextBase",
+        "length": "3"
+    },
+    "field_shorttext": {
+        "laravel_type": "string",
+        "render": "TextBase",
+        "length": "20"
+    },
+    "field_mediumtext": {
+        "laravel_type": "string",
+        "render": "TextBase",
+        "length": "50"
+    },
+    "field_longtext": {
+        "laravel_type": "string",
+        "render": "TextBase",
+        "length": "255"
+    },
+    "field_xlongtext": {
+        "laravel_type": "text",
+        "render": "TextAreaBase",
+        "length": ""
+    },
+    "field_url": {
+        "laravel_type": "string",
+        "render": "TextBase",
+        "length": "255"
+    },
+    "field_password": {
+        "laravel_type": "string",
+        "render": "TextBase",
+        "length": "255"
+    },
+    "field_json": {
+        "laravel_type": "json",
+        "render": "TextAreaBase",
+        "length": ""
+    },
+    "field_html": {
+        "laravel_type": "text",
+        "render": "TextAreaBase",
+        "length": ""
+    },
+    "field_phone": {
+        "laravel_type": "string",
+        "render": "TextBase",
+        "length": "20"
+    },
+    "field_zipcode": {
+        "laravel_type": "string",
+        "render": "TextBase",
+        "length": "10"
+    },
+    "field_color": {
+        "laravel_type": "string",
+        "render": "TextBase",
+        "length": "10"
+    },
+    "field_enum": {
+        "laravel_type": "enum",
+        "render": "SelectBase",
+        "length": ""
+    },
+    "field_id": {
+        "laravel_type": "unsignedBigInteger",
+        "render": "TextBase",
+        "length": ""
+    },
+    "field_fk": {
+        "laravel_type": "unsignedBigInteger",
+        "render": "SelectBase",
+        "length": ""
+    }
+}

@@ -1,0 +1,19 @@
+[
+	{
+		"data": "id"
+	},
+	{"title": "Tipo de documento", "data": "document_type", "tableReference": "0"},
+	{"title": "Numero", "data": "code", "tableReference": "0"},
+	{"title": "Nombres", "data": "name", "tableReference": "0"},
+	{"title": "Imagen", "data": "image", "tableReference": "0"},
+	{"title": "Genero", "data": "gender", "tableReference": "0"},
+	{"title": "Estado Civil", "data": "marital_status", "tableReference": "0"},
+	{"title": "Fecha de Nacimiento", "data": "date_of_birth", "tableReference": "0"},
+	{"title": "Direccion 1", "data": "address1", "tableReference": "0"},
+	{"title": "Direccion 2", "data": "address2", "tableReference": "0"},
+	{"title": "Telefono", "data": "phone", "tableReference": "0"},
+	{"title": "Celular", "data": "cellphone", "tableReference": "0"},
+	{"title": "E-Mail", "data": "email", "tableReference": "0"},
+	{"title": "Cargo", "data": "job_title", "tableReference": "0"},
+	{"title": "Estado", "data": "status", "tableReference": "0"}
+]

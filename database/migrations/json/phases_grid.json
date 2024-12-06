@@ -1,0 +1,8 @@
+[
+	{
+		"data": "id"
+	},
+	{"title": "Codigo", "data": "code", "tableReference": "0"},
+	{"title": "Nombre fase", "data": "name", "tableReference": "0"},
+	{"title": "Estado", "data": "status", "tableReference": "0"}
+]

@@ -1,0 +1,9 @@
+[
+	{
+		"data": "id"
+	},
+	{"title": "field_shorttext", "data": "Codigo"},
+	{"title": "field_mediumtext", "data": "Nombre fase"},
+	{"title": "field_fk", "data": "Fase"},
+	{"title": "field_boolean", "data": "Estado"}
+]

@@ -1,0 +1,6 @@
+[
+	{"columnName": "code", "columnLabel": "Codigo", "defaultValue": "", "type": "field_shorttext", "nullable": "true"},
+	{"columnName": "name", "columnLabel": "Nombre fase", "defaultValue": "", "type": "field_mediumtext", "nullable": "true"},
+	{"columnName": "status", "columnLabel": "Estado", "defaultValue": "", "type": "field_boolean", "nullable": "true"},
+	{"columnName": "rel_targets", "columnLabel": "Objetivos", "defaultValue": "", "type": "field_grid", "nullable": "true"}
+]

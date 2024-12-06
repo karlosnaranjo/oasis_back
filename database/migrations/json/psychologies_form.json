@@ -1,0 +1,546 @@
+[
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_shorttext", 
+				"data": "code", 
+				"label": "Codigo", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "true", 
+				"hidden": "false", 
+				"readonly": "true", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_datetime", 
+				"data": "issue_date", 
+				"label": "Fecha de Elaboracion", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "true", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_fk", 
+				"data": "patient_id", 
+				"label": "Paciente", 
+				"tableReference": "patients", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "reason_of_visit", 
+				"label": "Motivo de consulta", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "family_history", 
+				"label": "Antecedentes familiares", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "work_history", 
+				"label": "Antecedentes laborales", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "personal_history", 
+				"label": "Historia personal", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "addiction_history", 
+				"label": "Historia de adiccion", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "way_administration", 
+				"label": "Via de administracion", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "other_substances", 
+				"label": "Otras subtancias", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "highest_substance", 
+				"label": "Mayor sustancia", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_enum", 
+				"data": "current_consumption", 
+				"label": "Consumo actual", 
+				"tableReference": "0", 
+				"attrChoices": [{ "label": "SI", "value": "SI" },{ "label": "NO", "value": "NO" }], 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_enum", 
+				"data": "addictive_behavior", 
+				"label": "Esta realizando la conducta adictiva?", 
+				"tableReference": "0", 
+				"attrChoices": [{ "label": "SI", "value": "SI" },{ "label": "NO", "value": "NO" }], 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_enum", 
+				"data": "previous_treatment", 
+				"label": "Tratamientos anteriores", 
+				"tableReference": "0", 
+				"attrChoices": [{ "label": "SI", "value": "SI" },{ "label": "NO", "value": "NO" }], 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "place_treatment", 
+				"label": "Lugares y tiempos de tratamiento", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "mental_illness", 
+				"label": "Historia de enfermedad mental", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "suicidal_thinking", 
+				"label": "Ha tenido pensamientos o intentos de suicidio?", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "homicidal_attempts", 
+				"label": "Ha tenido pensamientos o intentos homicidas?", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "language", 
+				"label": "Lenguaje y pensamiento", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "orientation", 
+				"label": "Orientacion (Persona, espacio y tiempo):", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "memory", 
+				"label": "Memoria", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "mood", 
+				"label": "Estado de animo", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "feeding", 
+				"label": "Alimentacion", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "sleep", 
+				"label": "Sueno", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "medication", 
+				"label": "Esta tomando algun tipo de medicamento?", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "legal_issues", 
+				"label": "Problematicas judiciales y/o comportamentales", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "defense_mechanism", 
+				"label": "Mecanismos de defensa", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "another_difficulty", 
+				"label": "Otras dificultades", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "expectation", 
+				"label": "Que expectativas y motivaciones tiene para el proceso?", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "diagnostic_impression", 
+				"label": "Impresion diagnostica", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "intervention", 
+				"label": "Propuesta de intervencion", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_xlongtext", 
+				"data": "comments", 
+				"label": "Observaciones", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_fk", 
+				"data": "employee_id", 
+				"label": "Funcionario", 
+				"tableReference": "employees", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_boolean", 
+				"data": "status", 
+				"label": "Estado", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "tabs",
+		"children": [
+			{
+				"type": "grid", 
+				"field_type": "field_grid", 
+				"data": "rel_psychology_relatives", 
+				"label": "Historia Familiar", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "grid", 
+				"field_type": "field_grid", 
+				"data": "rel_psychology_drugs", 
+				"label": "Cuadro de consumo", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	}
+]
+

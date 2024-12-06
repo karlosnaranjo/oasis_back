@@ -1,0 +1,18 @@
+[
+	{
+		"data": "id"
+	},
+	{"title": "Codigo", "data": "code", "tableReference": "0"},
+	{"title": "Paciente", "data": "patient_id", "tableReference": "patients"},
+	{"title": "Fecha de Creacion", "data": "creation_date", "tableReference": "0"},
+	{"title": "Fase", "data": "phase_id", "tableReference": "phases"},
+	{"title": "Objetivo", "data": "target_id", "tableReference": "targets"},
+	{"title": "Fecha inicio", "data": "start_date", "tableReference": "0"},
+	{"title": "Fecha final", "data": "end_date", "tableReference": "0"},
+	{"title": "Apreciacion Equipo Clinico", "data": "clinical_team", "tableReference": "0"},
+	{"title": "Logros y Dificultades", "data": "achievement", "tableReference": "0"},
+	{"title": "Estrategias Utilizadas", "data": "strategy", "tableReference": "0"},
+	{"title": "Exigencias", "data": "requirement", "tableReference": "0"},
+	{"title": "Evaluacion", "data": "test", "tableReference": "0"},
+	{"title": "Estado", "data": "status", "tableReference": "0"}
+]

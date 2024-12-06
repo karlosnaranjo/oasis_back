@@ -1,0 +1,15 @@
+[
+	{"columnName": "code", "columnLabel": "Codigo", "defaultValue": "", "type": "field_shorttext", "nullable": "true"},
+	{"columnName": "patient_id", "columnLabel": "Paciente", "defaultValue": "", "type": "field_fk", "references": "patients", "nullable": "true"},
+	{"columnName": "creation_date", "columnLabel": "Fecha de Creacion", "defaultValue": "", "type": "field_datetime", "nullable": "true"},
+	{"columnName": "phase_id", "columnLabel": "Fase", "defaultValue": "", "type": "field_fk", "references": "phases", "nullable": "true"},
+	{"columnName": "target_id", "columnLabel": "Objetivo", "defaultValue": "", "type": "field_fk", "references": "targets", "nullable": "true"},
+	{"columnName": "start_date", "columnLabel": "Fecha inicio", "defaultValue": "", "type": "field_datetime", "nullable": "true"},
+	{"columnName": "end_date", "columnLabel": "Fecha final", "defaultValue": "", "type": "field_datetime", "nullable": "true"},
+	{"columnName": "clinical_team", "columnLabel": "Apreciacion Equipo Clinico", "defaultValue": "", "type": "field_xlongtext", "nullable": "true"},
+	{"columnName": "achievement", "columnLabel": "Logros y Dificultades", "defaultValue": "", "type": "field_xlongtext", "nullable": "true"},
+	{"columnName": "strategy", "columnLabel": "Estrategias Utilizadas", "defaultValue": "", "type": "field_xlongtext", "nullable": "true"},
+	{"columnName": "requirement", "columnLabel": "Exigencias", "defaultValue": "", "type": "field_xlongtext", "nullable": "true"},
+	{"columnName": "test", "columnLabel": "Evaluacion", "defaultValue": "", "type": "field_enum", "attrChoices": [{ "label": "Positivo", "value": "Positivo" },{ "label": "Negativo", "value": "Negativo" },{ "label": "Observacion", "value": "Observacion" }], "nullable": "true"},
+	{"columnName": "status", "columnLabel": "Estado", "defaultValue": "", "type": "field_boolean", "nullable": "true"}
+]

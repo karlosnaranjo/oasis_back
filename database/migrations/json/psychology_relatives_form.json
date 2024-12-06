@@ -1,0 +1,76 @@
+[
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_fk", 
+				"data": "psychology_id", 
+				"label": "id", 
+				"tableReference": "psychologies", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_mediumtext", 
+				"data": "name", 
+				"label": "Nombres y Apellidos", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_fk", 
+				"data": "relative_id", 
+				"label": "Parentesco", 
+				"tableReference": "relatives", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_shorttext", 
+				"data": "age", 
+				"label": "Edad", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_enum", 
+				"data": "relationship_type", 
+				"label": "Tipo de relacion", 
+				"tableReference": "0", 
+				"attrChoices": [{ "label": "Estrecha", "value": "Estrecha" },{ "label": "Cercana", "value": "Cercana" },{ "label": "Distante", "value": "Distante" }], 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	}
+]
+

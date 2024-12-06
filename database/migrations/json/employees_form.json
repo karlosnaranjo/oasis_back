@@ -1,0 +1,198 @@
+[
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_enum", 
+				"data": "document_type", 
+				"label": "Tipo de documento", 
+				"tableReference": "0", 
+				"attrChoices": [{ "label": "DNI", "value": "DNI" },{ "label": "RUC", "value": "RUC" },{ "label": "TI", "value": "TI" },{ "label": "CEDULA", "value": "CEDULA" }], 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_shorttext", 
+				"data": "code", 
+				"label": "Numero", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "true", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_mediumtext", 
+				"data": "name", 
+				"label": "Nombres", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "true", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_longtext", 
+				"data": "image", 
+				"label": "Imagen", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_enum", 
+				"data": "gender", 
+				"label": "Genero", 
+				"tableReference": "0", 
+				"attrChoices": [{ "label": "Masculino", "value": "Masculino" },{ "label": "Femenino", "value": "Femenino" },{ "label": "No binario", "value": "No binario" },{ "label": "Prefiero no especificar", "value": "Prefiero no especificar" }], 
+				"layoutClass": "100 md:50", 
+				"required": "true", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_enum", 
+				"data": "marital_status", 
+				"label": "Estado Civil", 
+				"tableReference": "0", 
+				"attrChoices": [{ "label": "Soltero(a)", "value": "Soltero(a)" },{ "label": "Casado(a)", "value": "Casado(a)" },{ "label": "Union Libre", "value": "Union Libre" },{ "label": "Separado(a)", "value": "Separado(a)" },{ "label": "Divorciado(a)", "value": "Divorciado(a)" },{ "label": "Viudo(a)", "value": "Viudo(a)" }], 
+				"layoutClass": "100 md:50", 
+				"required": "true", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_date", 
+				"data": "date_of_birth", 
+				"label": "Fecha de Nacimiento", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "false", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_longtext", 
+				"data": "address1", 
+				"label": "Direccion 1", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "true", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_longtext", 
+				"data": "address2", 
+				"label": "Direccion 2", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "true", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_phone", 
+				"data": "phone", 
+				"label": "Telefono", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "true", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_mediumtext", 
+				"data": "cellphone", 
+				"label": "Celular", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "true", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_email", 
+				"data": "email", 
+				"label": "E-Mail", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "true", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			}
+
+		]
+	},
+	{
+		"type": "row",
+		"children": [
+			{
+				"type": "column", 
+				"field_type": "field_mediumtext", 
+				"data": "job_title", 
+				"label": "Cargo", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "true", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": ""
+			},
+			{
+				"type": "column", 
+				"field_type": "field_boolean", 
+				"data": "status", 
+				"label": "Estado", 
+				"tableReference": "0", 
+				"layoutClass": "100 md:50", 
+				"required": "true", 
+				"hidden": "false", 
+				"readonly": "false", 
+				"defaultValue": "1"
+			}
+
+		]
+	}
+]
+
