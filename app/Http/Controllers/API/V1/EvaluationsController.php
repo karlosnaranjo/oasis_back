@@ -235,5 +235,17 @@ class EvaluationsController extends ApiController
         ];
         return response($respuesta, Response::HTTP_OK);
     }
+
+    public function targetsByPhase(Request $request)
+    {
+        $phaseId = $request->get('phase_id');
+        $targets = Targets::where('phase_id', $phaseId)
+            ->select('id', 'name')
+            ->get();
+
+        return response([
+            'targets' => $targets
+        ], Response::HTTP_OK);
+    }
 }
 

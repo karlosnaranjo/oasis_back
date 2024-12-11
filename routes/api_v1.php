@@ -139,6 +139,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::prefix('/evaluations')->group(function () {
         Route::get('', [EvaluationsController::class, 'index']);
         Route::get('/initform', [EvaluationsController::class, 'initForm']);
+        Route::get('/targets-by-phase', [EvaluationsController::class, 'targetsByPhase']);
         Route::get('/{id}', [EvaluationsController::class, 'show']);
         Route::put('/{id}', [EvaluationsController::class, 'update']);
         Route::delete('/{id}', [EvaluationsController::class, 'destroy']);
