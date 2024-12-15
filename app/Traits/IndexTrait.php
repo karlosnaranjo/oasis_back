@@ -29,9 +29,19 @@ trait IndexTrait
     {
         $filtersJson = $request->get('filters');
         $filters = json_decode($filtersJson, true);
+        $where = $request->get('where');
+        if (!empty($where)) {
+            $whereCondition = explode('=', $where);
+            if (count($whereCondition) == 2) {
+                $field = $whereCondition[0];
+                $value = $whereCondition[1];
+                $query->where($field, $value);
+            }
+        }
 
         if (is_array($filters) && !empty($filters)) {
             foreach ($filters as $field => $value) {
+                echo $filters.PHP_EOL;
                 $query->where($field, $value);
             }
         }
