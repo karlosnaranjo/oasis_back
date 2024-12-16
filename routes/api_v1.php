@@ -66,7 +66,7 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::put('changestatus/{id}', [PsychologyRelativesController::class, 'changeStatus']);
     });
 
-     //*********************************
+    //*********************************
     // Psychology_drugs
     //*********************************
     Route::prefix('/psychologies_drugs')->group(function () {
@@ -79,7 +79,7 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::put('changestatus/{id}', [PsychologyDrugsController::class, 'changeStatus']);
     });
 
-        //*********************************
+    //*********************************
     // phases
     //*********************************
     Route::prefix('/phases')->group(function () {
@@ -92,7 +92,7 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::put('changestatus/{id}', [PhasesController::class, 'changeStatus']);
     });
 
-    
+
     //*********************************
     // targets
     //*********************************
@@ -132,7 +132,7 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::put('changestatus/{id}', [EvolutionsController::class, 'changeStatus']);
     });
 
-    
+
     //*********************************
     // evaluations
     //*********************************
@@ -178,7 +178,7 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::get('', [PatientsController::class, 'index']);
         Route::get('/initform', [PatientsController::class, 'initForm']);
         Route::get('/{id}', [PatientsController::class, 'show']);
-        Route::put('/{id}', [PatientsController::class, 'update']);
+        Route::post('/{id}', [PatientsController::class, 'update']);
         Route::delete('/{id}', [PatientsController::class, 'destroy']);
         Route::post('', [PatientsController::class, 'store']);
         Route::put('changestatus/{id}', [PatientsController::class, 'changeStatus']);

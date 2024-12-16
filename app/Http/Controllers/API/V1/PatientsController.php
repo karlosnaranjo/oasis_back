@@ -18,7 +18,8 @@ use App\Http\Repositories\PatientsRespository;
 // Resources
 use App\Http\Resources\V1\PatientsResource;
 
-
+// Intervention Image
+use Intervention\Image\Facades\Image;
 
 class PatientsController extends ApiController
 {
@@ -46,6 +47,13 @@ class PatientsController extends ApiController
         $dataIn = $request->all();
         $dataIn['status'] = true;
 
+        // Compress and resize the avatar image
+
+        if (isset($dataIn['avatar'])) {
+            $image = Image::make($dataIn['avatar']);
+            $image->resize(100, 100); // Resize to 100x100 pixels
+            $dataIn['image'] = (string) $image->encode('data-url'); // Convert back to base64
+        }
         // insert the new record into the database
         $result = Patients::create($dataIn);
 
@@ -68,6 +76,13 @@ class PatientsController extends ApiController
      */
     public function update($id, Request $request)
     {
+        $dataIn = $request->all();
+        if (isset($dataIn['avatar'])) {
+            $image = Image::make($dataIn['avatar']);
+            $image->resize(100, 100); // Resize to 100x100 pixels
+            $dataIn['image'] = (string) $image->encode('data-url'); // Convert back to base64
+        }
+
         // Find the id into the database using its model
         $result = Patients::find($id);
         // if not found, return a 404 response
@@ -84,7 +99,7 @@ class PatientsController extends ApiController
         } else {
 
             // We have to be sure that the variables contain its values before to assign them
-            $result->update($request->all());
+            $result->update($dataIn);
 
             // send a successful response
             return $this->successResponse(
@@ -109,7 +124,7 @@ class PatientsController extends ApiController
         // Find the parent id from the request
         $parentId = $request->get('');
         // Retrieve the record based on parent id
-        $result = Patients::where('', $parentId)->first(); 
+        $result = Patients::where('', $parentId)->first();
 
         // if not found, create a new record
         if (is_null($result)) {
@@ -141,7 +156,7 @@ class PatientsController extends ApiController
      */
     public function destroy($id)
     {
-    // Find the id into the database using its model
+        // Find the id into the database using its model
         $result = Patients::find($id);
 
         // if not found, return a 404 response
@@ -222,15 +237,14 @@ class PatientsController extends ApiController
 
         //por cada FK que tenga la tabla principal hacer una consulta independiente a esa maestra con los campos
         //ID y Nombre
-		$drug = Drugs::select('id','name')->get();
-		$employee = Employees::select('id','name')->get();
+        $drug = Drugs::select('id', 'name')->get();
+        $employee = Employees::select('id', 'name')->get();
 
         $respuesta = [
-			"patients" => new PatientsResource($data),
-			"drug" => $drug,
-			"employee" => $employee,
+            "patients" => new PatientsResource($data),
+            "drug" => $drug,
+            "employee" => $employee,
         ];
         return response($respuesta, Response::HTTP_OK);
     }
 }
-
