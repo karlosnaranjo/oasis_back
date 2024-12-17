@@ -9,7 +9,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('patients', function (Blueprint $table) {
-            $table->binary('image')->change();
+            $table->text('image')->change();
         });
     }
 

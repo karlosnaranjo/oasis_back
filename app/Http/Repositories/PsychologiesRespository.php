@@ -14,11 +14,12 @@ use App\Traits\IndexTrait;
  */
 class PsychologiesRespository
 {
-    use IndexTrait;
-    public function getPsychologiesList(Request $request)
-    {
-        $query =  Psychologies::select(
+	use IndexTrait;
+	public function getPsychologiesList(Request $request)
+	{
+		$query =  Psychologies::select(
 			'psychologies.id',
+			'patient.image as image',
 			'psychologies.code',
 			'psychologies.issue_date',
 			'patient.name as patient_name',
@@ -54,15 +55,15 @@ class PsychologiesRespository
 			'employee.name as employee_name',
 			'psychologies.status',
 
-            )
-			->leftJoin('patients as patient', function($join) {
+		)
+			->leftJoin('patients as patient', function ($join) {
 				$join->on('patient.id', '=', 'psychologies.patient_id')
 					->whereNull('patient.deleted_at');
 			})
-			->leftJoin('employees as employee', function($join) {
+			->leftJoin('employees as employee', function ($join) {
 				$join->on('employee.id', '=', 'psychologies.employee_id')
 					->whereNull('employee.deleted_at');
 			});
-        return $this->indexGrid($request, $query);
-    }
+		return $this->indexGrid($request, $query);
+	}
 }

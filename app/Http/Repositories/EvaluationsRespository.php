@@ -14,11 +14,12 @@ use App\Traits\IndexTrait;
  */
 class EvaluationsRespository
 {
-    use IndexTrait;
-    public function getEvaluationsList(Request $request)
-    {
-        $query =  Evaluations::select(
+	use IndexTrait;
+	public function getEvaluationsList(Request $request)
+	{
+		$query =  Evaluations::select(
 			'evaluations.id',
+			'patient.image as image',
 			'evaluations.code',
 			'patient.name as patient_name',
 			'evaluations.creation_date',
@@ -33,19 +34,19 @@ class EvaluationsRespository
 			'evaluations.test',
 			'evaluations.status',
 
-            )
-			->leftJoin('patients as patient', function($join) {
+		)
+			->leftJoin('patients as patient', function ($join) {
 				$join->on('patient.id', '=', 'evaluations.patient_id')
 					->whereNull('patient.deleted_at');
 			})
-			->leftJoin('phases as phase', function($join) {
+			->leftJoin('phases as phase', function ($join) {
 				$join->on('phase.id', '=', 'evaluations.phase_id')
 					->whereNull('phase.deleted_at');
 			})
-			->leftJoin('targets as target', function($join) {
+			->leftJoin('targets as target', function ($join) {
 				$join->on('target.id', '=', 'evaluations.target_id')
 					->whereNull('target.deleted_at');
 			});
-        return $this->indexGrid($request, $query);
-    }
+		return $this->indexGrid($request, $query);
+	}
 }
