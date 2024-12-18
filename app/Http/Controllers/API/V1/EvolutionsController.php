@@ -35,6 +35,12 @@ class EvolutionsController extends ApiController
         return $repo->getEvolutionsList($request);
     }
 
+    public function report($id)
+    {
+        $repo = new EvolutionsRespository();
+        return $repo->getEvolutionsReport($id);
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -109,7 +115,7 @@ class EvolutionsController extends ApiController
         // Find the parent id from the request
         $parentId = $request->get('');
         // Retrieve the record based on parent id
-        $result = Evolutions::where('', $parentId)->first(); 
+        $result = Evolutions::where('', $parentId)->first();
 
         // if not found, create a new record
         if (is_null($result)) {
@@ -141,7 +147,7 @@ class EvolutionsController extends ApiController
      */
     public function destroy($id)
     {
-    // Find the id into the database using its model
+        // Find the id into the database using its model
         $result = Evolutions::find($id);
 
         // if not found, return a 404 response
@@ -222,15 +228,14 @@ class EvolutionsController extends ApiController
 
         //por cada FK que tenga la tabla principal hacer una consulta independiente a esa maestra con los campos
         //ID y Nombre
-		$patient = Patients::select('id','name')->get();
-		$employee = Employees::select('id','name')->get();
+        $patient = Patients::select('id', 'name')->get();
+        $employee = Employees::select('id', 'name')->get();
 
         $respuesta = [
-			"evolutions" => new EvolutionsResource($data),
-			"patient" => $patient,
-			"employee" => $employee,
+            "evolutions" => new EvolutionsResource($data),
+            "patient" => $patient,
+            "employee" => $employee,
         ];
         return response($respuesta, Response::HTTP_OK);
     }
 }
-

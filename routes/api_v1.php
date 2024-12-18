@@ -124,6 +124,7 @@ Route::middleware('auth:sanctum')->group(function () {
     //*********************************
     Route::prefix('/evolutions')->group(function () {
         Route::get('', [EvolutionsController::class, 'index']);
+        Route::get('/report/{id}', [EvolutionsController::class, 'report']);
         Route::get('/initform', [EvolutionsController::class, 'initForm']);
         Route::get('/{id}', [EvolutionsController::class, 'show']);
         Route::put('/{id}', [EvolutionsController::class, 'update']);
