@@ -37,7 +37,8 @@ class EvolutionsRespository
 			->leftJoin('employees as employee', function ($join) {
 				$join->on('employee.id', '=', 'evolutions.employee_id')
 					->whereNull('employee.deleted_at');
-			});
+			})
+			->orderby('evolutions.id', 'desc');
 		return $this->indexGrid($request, $query);
 	}
 

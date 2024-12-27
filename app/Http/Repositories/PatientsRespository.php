@@ -14,10 +14,10 @@ use App\Traits\IndexTrait;
  */
 class PatientsRespository
 {
-    use IndexTrait;
-    public function getPatientsList(Request $request)
-    {
-        $query =  Patients::select(
+	use IndexTrait;
+	public function getPatientsList(Request $request)
+	{
+		$query =  Patients::select(
 			'patients.id',
 			'patients.document_type',
 			'patients.code',
@@ -60,15 +60,16 @@ class PatientsRespository
 			'employee.name as employee_name',
 			'patients.status',
 
-            )
-			->leftJoin('drugs as drug', function($join) {
+		)
+			->leftJoin('drugs as drug', function ($join) {
 				$join->on('drug.id', '=', 'patients.drug_id')
 					->whereNull('drug.deleted_at');
 			})
-			->leftJoin('employees as employee', function($join) {
+			->leftJoin('employees as employee', function ($join) {
 				$join->on('employee.id', '=', 'patients.employee_id')
 					->whereNull('employee.deleted_at');
-			});
-        return $this->indexGrid($request, $query);
-    }
+			})
+			->orderby('patients.id', 'desc');
+		return $this->indexGrid($request, $query);
+	}
 }

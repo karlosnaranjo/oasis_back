@@ -46,7 +46,8 @@ class EvaluationsRespository
 			->leftJoin('targets as target', function ($join) {
 				$join->on('target.id', '=', 'evaluations.target_id')
 					->whereNull('target.deleted_at');
-			});
+			})
+			->orderby('evaluations.id', 'desc');
 		return $this->indexGrid($request, $query);
 	}
 }

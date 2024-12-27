@@ -63,7 +63,8 @@ class PsychologiesRespository
 			->leftJoin('employees as employee', function ($join) {
 				$join->on('employee.id', '=', 'psychologies.employee_id')
 					->whereNull('employee.deleted_at');
-			});
+			})
+			->orderby('psychologies.id', 'desc');
 		return $this->indexGrid($request, $query);
 	}
 }
