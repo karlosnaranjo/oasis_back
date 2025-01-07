@@ -41,6 +41,7 @@ class DrugsController extends ApiController
      */
     public function store(Request $request)
     {
+        $request->merge(['code' => DrugsRespository::lastCode()]);
         $dataIn = $request->all();
         $dataIn['status'] = true;
 
@@ -107,7 +108,7 @@ class DrugsController extends ApiController
         // Find the parent id from the request
         $parentId = $request->get('');
         // Retrieve the record based on parent id
-        $result = Drugs::where('', $parentId)->first(); 
+        $result = Drugs::where('', $parentId)->first();
 
         // if not found, create a new record
         if (is_null($result)) {
@@ -139,7 +140,7 @@ class DrugsController extends ApiController
      */
     public function destroy($id)
     {
-    // Find the id into the database using its model
+        // Find the id into the database using its model
         $result = Drugs::find($id);
 
         // if not found, return a 404 response
@@ -222,9 +223,8 @@ class DrugsController extends ApiController
         //ID y Nombre
 
         $respuesta = [
-			"drugs" => new DrugsResource($data),
+            "drugs" => new DrugsResource($data),
         ];
         return response($respuesta, Response::HTTP_OK);
     }
 }
-

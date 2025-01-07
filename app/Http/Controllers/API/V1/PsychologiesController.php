@@ -43,6 +43,7 @@ class PsychologiesController extends ApiController
      */
     public function store(Request $request)
     {
+        $request->merge(['code' => PsychologiesRespository::lastCode()]);
         $dataIn = $request->all();
         $dataIn['status'] = true;
 
@@ -109,7 +110,7 @@ class PsychologiesController extends ApiController
         // Find the parent id from the request
         $parentId = $request->get('');
         // Retrieve the record based on parent id
-        $result = Psychologies::where('', $parentId)->first(); 
+        $result = Psychologies::where('', $parentId)->first();
 
         // if not found, create a new record
         if (is_null($result)) {
@@ -141,7 +142,7 @@ class PsychologiesController extends ApiController
      */
     public function destroy($id)
     {
-    // Find the id into the database using its model
+        // Find the id into the database using its model
         $result = Psychologies::find($id);
 
         // if not found, return a 404 response
@@ -222,15 +223,14 @@ class PsychologiesController extends ApiController
 
         //por cada FK que tenga la tabla principal hacer una consulta independiente a esa maestra con los campos
         //ID y Nombre
-		$patient = Patients::select('id','name')->get();
-		$employee = Employees::select('id','name')->get();
+        $patient = Patients::select('id', 'name')->get();
+        $employee = Employees::select('id', 'name')->get();
 
         $respuesta = [
-			"psychologies" => new PsychologiesResource($data),
-			"patient" => $patient,
-			"employee" => $employee,
+            "psychologies" => new PsychologiesResource($data),
+            "patient" => $patient,
+            "employee" => $employee,
         ];
         return response($respuesta, Response::HTTP_OK);
     }
 }
-

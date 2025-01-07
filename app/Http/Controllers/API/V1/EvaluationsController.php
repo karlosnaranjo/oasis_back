@@ -44,6 +44,7 @@ class EvaluationsController extends ApiController
      */
     public function store(Request $request)
     {
+        $request->merge(['code' => EvaluationsRespository::lastCode()]);
         $dataIn = $request->all();
         $dataIn['status'] = true;
 
@@ -110,7 +111,7 @@ class EvaluationsController extends ApiController
         // Find the parent id from the request
         $parentId = $request->get('');
         // Retrieve the record based on parent id
-        $result = Evaluations::where('', $parentId)->first(); 
+        $result = Evaluations::where('', $parentId)->first();
 
         // if not found, create a new record
         if (is_null($result)) {
@@ -142,7 +143,7 @@ class EvaluationsController extends ApiController
      */
     public function destroy($id)
     {
-    // Find the id into the database using its model
+        // Find the id into the database using its model
         $result = Evaluations::find($id);
 
         // if not found, return a 404 response
@@ -223,15 +224,15 @@ class EvaluationsController extends ApiController
 
         //por cada FK que tenga la tabla principal hacer una consulta independiente a esa maestra con los campos
         //ID y Nombre
-		$patient = Patients::select('id','name')->get();
-		$phase = Phases::select('id','name')->get();
-		$target = Targets::select('id','name')->get();
+        $patient = Patients::select('id', 'name')->get();
+        $phase = Phases::select('id', 'name')->get();
+        $target = Targets::select('id', 'name')->get();
 
         $respuesta = [
-			"evaluations" => new EvaluationsResource($data),
-			"patient" => $patient,
-			"phase" => $phase,
-			"target" => $target,
+            "evaluations" => new EvaluationsResource($data),
+            "patient" => $patient,
+            "phase" => $phase,
+            "target" => $target,
         ];
         return response($respuesta, Response::HTTP_OK);
     }
@@ -248,4 +249,3 @@ class EvaluationsController extends ApiController
         ], Response::HTTP_OK);
     }
 }
-

@@ -41,6 +41,7 @@ class PhasesController extends ApiController
      */
     public function store(Request $request)
     {
+        $request->merge(['code' => PhasesRespository::lastCode()]);
         $dataIn = $request->all();
         $dataIn['status'] = true;
 
@@ -107,7 +108,7 @@ class PhasesController extends ApiController
         // Find the parent id from the request
         $parentId = $request->get('');
         // Retrieve the record based on parent id
-        $result = Phases::where('', $parentId)->first(); 
+        $result = Phases::where('', $parentId)->first();
 
         // if not found, create a new record
         if (is_null($result)) {
@@ -139,7 +140,7 @@ class PhasesController extends ApiController
      */
     public function destroy($id)
     {
-    // Find the id into the database using its model
+        // Find the id into the database using its model
         $result = Phases::find($id);
 
         // if not found, return a 404 response
@@ -222,9 +223,8 @@ class PhasesController extends ApiController
         //ID y Nombre
 
         $respuesta = [
-			"phases" => new PhasesResource($data),
+            "phases" => new PhasesResource($data),
         ];
         return response($respuesta, Response::HTTP_OK);
     }
 }
-

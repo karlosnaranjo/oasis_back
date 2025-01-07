@@ -69,4 +69,13 @@ class EvolutionsRespository
 			'evolution' => $query
 		], 200);
 	}
+
+	public static function lastCode()
+	{
+		$lastEvolution = Evolutions::orderBy("id", "DESC")->first();
+		$consecutive = isset($lastEvolution) ? $lastEvolution->codigo : 0;
+		$consecutive = (int)$consecutive + 1;
+		$consecutive = str_repeat('0', 5 - strlen($consecutive)) . $consecutive;
+		return  $consecutive;
+	}
 }

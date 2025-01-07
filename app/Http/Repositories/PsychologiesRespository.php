@@ -67,4 +67,13 @@ class PsychologiesRespository
 			->orderby('psychologies.id', 'desc');
 		return $this->indexGrid($request, $query);
 	}
+
+	public static function lastCode()
+	{
+		$lastpsychology = Psychologies::orderBy("id", "DESC")->first();
+		$consecutive = isset($lastpsychology) ? $lastpsychology->code : 0;
+		$consecutive = (int)$consecutive + 1;
+		$consecutive = str_repeat('0', 5 - strlen($consecutive)) . $consecutive;
+		return  $consecutive;
+	}
 }

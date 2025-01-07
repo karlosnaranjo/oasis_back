@@ -49,6 +49,7 @@ class EvolutionsController extends ApiController
      */
     public function store(Request $request)
     {
+        $request->merge(['code' => EvolutionsRespository::lastCode()]);
         $dataIn = $request->all();
         $dataIn['status'] = true;
 

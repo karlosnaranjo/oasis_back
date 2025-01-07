@@ -50,4 +50,13 @@ class EvaluationsRespository
 			->orderby('evaluations.id', 'desc');
 		return $this->indexGrid($request, $query);
 	}
+
+	public static function lastCode()
+	{
+		$lastEvaluation = Evaluations::orderBy("id", "DESC")->first();
+		$consecutive = isset($lastEvaluation) ? $lastEvaluation->code : 0;
+		$consecutive = (int)$consecutive + 1;
+		$consecutive = str_repeat('0', 5 - strlen($consecutive)) . $consecutive;
+		return  $consecutive;
+	}
 }
