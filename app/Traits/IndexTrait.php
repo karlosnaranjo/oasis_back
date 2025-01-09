@@ -27,22 +27,22 @@ trait IndexTrait
 
     protected function applyFilters(Request $request, Builder $query)
     {
-        $filtersJson = $request->get('filters');
-        $filters = json_decode($filtersJson, true);
-        $where = $request->get('where');
-        if (!empty($where)) {
-            $whereCondition = explode('=', $where);
-            if (count($whereCondition) == 2) {
-                $field = $whereCondition[0];
-                $value = $whereCondition[1];
-                $query->where($field, $value);
+        // el campo where (si existe), debe llegar con el siguiente formato
+        // "campo=valor", EJ: "transaction_id=5"
+        $where = $request->get('where') ?? null;
+        if ($where) {
+            $values = explode("=", $where);
+            if (isset($values[0]) && isset($values[1])) {
+                $query->where($values[0], $values[1]);
             }
         }
+        $filtersJson = $request->get('filters');
+        $filters = json_decode($filtersJson, true);
 
         if (is_array($filters) && !empty($filters)) {
             foreach ($filters as $field => $value) {
-                echo $filters.PHP_EOL;
-                $query->where($field, $value);
+                //$field = str_replace('-', '.', $field);
+                $query->where($field, 'like', $value);
             }
         }
     }
