@@ -230,9 +230,12 @@ class PatientsController extends ApiController
 
     public function initForm(Request $request)
     {
-        //tabla de principal debe devolver sus campos sin hacer join de los foreingkey
         $id = $request->get('id');
-        $data =  ((isset($id) and !is_null($id)) ? Patients::where('id', '=', $id)->first()
+        $data = ((isset($id) && !is_null($id))
+            ? Patients::select('*')
+            ->selectRaw('TIMESTAMPDIFF(YEAR, date_of_birth, CURDATE()) as age')
+            ->where('id', '=', $id)
+            ->first()
             : new Patients());
 
         //por cada FK que tenga la tabla principal hacer una consulta independiente a esa maestra con los campos

@@ -6,16 +6,16 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class PatientsResource extends JsonResource
 {
-    /**
-     * Transform the resource into an array.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
-     */
-    public function toArray($request)
-    {
-        return [
-            'id' => $this->id,
+	/**
+	 * Transform the resource into an array.
+	 *
+	 * @param  \Illuminate\Http\Request  $request
+	 * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
+	 */
+	public function toArray($request)
+	{
+		return [
+			'id' => $this->id,
 			'document_type' => $this->document_type,
 			'code' => $this->code,
 			'name' => $this->name,
@@ -23,6 +23,7 @@ class PatientsResource extends JsonResource
 			'gender' => $this->gender,
 			'marital_status' => $this->marital_status,
 			'date_of_birth' => $this->date_of_birth,
+			'age' => $this->age,
 			'address1' => $this->address1,
 			'address2' => $this->address2,
 			'phone' => $this->phone,
@@ -56,9 +57,9 @@ class PatientsResource extends JsonResource
 			'comments' => $this->comments,
 			'employee_id' => $this->employee_id,
 			'status' => $this->status,
-            'employees' => $this->whenLoaded('employees', function () {
-                return new EmployeesResource($this->employees);
-            }),
-        ];
-    }
+			'employees' => $this->whenLoaded('employees', function () {
+				return new EmployeesResource($this->employees);
+			}),
+		];
+	}
 }
